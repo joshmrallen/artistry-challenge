@@ -1,0 +1,22 @@
+<h1>Instruments</h1><br>
+
+<table>
+
+    <tr width='25'>
+        <th scope='col' align='left'>Name</th>
+        <th scope='col' align='left'>Classification</th>
+    </tr>
+
+    <% @instruments.each do |instrument| %>
+        <tr>
+            <td>
+                <%= link_to instrument.name, instrument_path(instrument.id) %>
+            </td>
+            <td>
+                <%= instrument.classification %>
+            </td>
+        </tr>
+    <% end %>
+
+</table>
+

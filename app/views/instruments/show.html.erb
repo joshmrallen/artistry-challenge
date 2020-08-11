@@ -1,0 +1,6 @@
+<h1><%= @instrument.name %></h1>
+<h3>Classification: <%= @instrument.classification %></h3>
+<h3>Artists who play the <%= @instrument.name %>:</h3><br>
+<% @instrument.artists.each do |artist| %>
+    <h4><%= link_to artist.name, artist_path(artist.id) %></h4>
+<% end %>
